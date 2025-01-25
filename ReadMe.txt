@@ -1,4 +1,1 @@
-github
 Add .gitIgnore
-_pat_
-11BOVKYNY0cQvb3hcM4hfT_RsMdR6fHBPysdfM0EEAUNAi4pGgfa8O9UhbK9xKfkSSCNMQ76QYkwIae29L
