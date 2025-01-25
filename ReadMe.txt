@@ -1,1 +1,1 @@
-Add .gitIgnoe
+Add .gitIgnore
