@@ -1,1 +1,1 @@
-Add .gitIgnore
+algorithms conan proj

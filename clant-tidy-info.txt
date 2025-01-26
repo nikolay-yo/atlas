@@ -1,0 +1,79 @@
+Adding `clang-tidy` to a local development preset typically means configuring your project or development environment to use `clang-tidy` for static code analysis. `clang-tidy` is a tool that analyzes C++ code to find potential issues, enforce coding standards, and provide suggestions for improving code quality. It works by performing static analysis on your code and can catch bugs, performance issues, style violations, and more.
+
+When you hear about adding `clang-tidy` to a **local dev preset**, it often refers to configuring a specific environment, build system, or IDE to run `clang-tidy` automatically as part of the development process.
+
+### Here’s how you can add `clang-tidy` to your local development preset:
+
+#### 1. **Install `clang-tidy`**
+First, make sure that `clang-tidy` is installed. If it's not installed already, you can install it using your package manager or by downloading it directly.
+
+- **On Ubuntu/Linux:**
+  ```bash
+  sudo apt install clang-tidy
+  ```
+
+- **On macOS (using Homebrew):**
+  ```bash
+  brew install llvm
+  ```
+
+- **On Windows:**  
+  You can get it via the [LLVM website](https://llvm.org/), or you might already have it if you installed Visual Studio with the Clang tools.
+
+#### 2. **Add `clang-tidy` to Your Build System (e.g., CMake)**
+
+If you’re using **CMake** for your project, you can integrate `clang-tidy` into your build system so that it runs automatically on your code.
+
+- Add this to your `CMakeLists.txt` file:
+  ```cmake
+  find_program(CLANG_TIDY_EXE NAMES clang-tidy)
+  if (CLANG_TIDY_EXE)
+      set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_EXE};-checks=*")
+  endif()
+  ```
+
+  This will run `clang-tidy` with all checks enabled when you build your project. You can customize the `-checks` argument to specify which checks you want to run.
+
+#### 3. **Configure `clang-tidy` with Preset Files**
+If your IDE or build system supports it, you can set up a **.clang-tidy configuration file** in the root of your project. This file defines which checks should be enabled and any specific settings for `clang-tidy`.
+
+- **Example `.clang-tidy` file:**
+  ```yaml
+  Checks:          '*, -llvm-header-guard, -clang-analyzer-*'
+  CheckOptions:
+    - key:             modernize-use-auto.Level
+      value:           '3'
+  ```
+
+This tells `clang-tidy` to run all checks except for those related to LLVM header guards and the Clang analyzer. It also customizes the behavior for `modernize-use-auto`.
+
+#### 4. **Integrate `clang-tidy` with Your IDE**
+
+Most modern IDEs like **Visual Studio Code**, **CLion**, and **Visual Studio** have integration for `clang-tidy`. You can configure these IDEs to automatically run `clang-tidy` as part of the build process, or even during file save.
+
+For example, in **Visual Studio Code**:
+- Install the **C++ Extension**.
+- In `settings.json`, you can configure `clang-tidy` as follows:
+  ```json
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.clangTidy.path": "/path/to/clang-tidy"
+  ```
+
+#### 5. **Run `clang-tidy` Manually**
+
+If you want to run `clang-tidy` manually on your code (for example, on specific files), you can do so via the command line like this:
+
+```bash
+clang-tidy my_file.cpp -- -I/path/to/headers
+```
+
+The `--` separates the `clang-tidy` options from the compiler options (like include paths).
+
+---
+
+### Summary
+- **Clang-tidy** is a tool for static analysis of C++ code, helping catch bugs and enforce coding standards.
+- To add it to your local dev preset, you can integrate it into your build system (like CMake) or IDE (e.g., Visual Studio Code, CLion).
+- You can configure `clang-tidy` to automatically run during your build process, or you can set up a `.clang-tidy` file for customized checks.
+
+Are you using a specific IDE or build system? I can help with more tailored instructions if needed!
