@@ -1,0 +1,44 @@
+# Compiled object files, static libraries, and executables
+*.o
+*.a
+*.so
+*.exe
+*.out
+*.app
+
+# Debug and release directories
+/debug/
+*/*/debug/
+*/*/Release/
+*/*/Debug/
+*/*/out/
+
+# IDE and build system directories
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+*.cmake
+Makefile.*
+*.ninja
+*.vcxproj
+*.vcxproj.user
+*.config
+*.suo
+
+# Dependency directories (for tools like vcpkg)
+/vcpkg/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup and temporary files
+*.swp
+*.bak
+*.tmp
+*.log
