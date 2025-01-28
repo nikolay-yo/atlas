@@ -1,15 +1,16 @@
-#include <include/Singleton.hpp>
+#include <creational/singleton/Singleton.hpp>
 
-using DesignPattern;
+using namespace DesignPattern;
 
 int main() {
     // Accessing the Singleton in multiple threads
     std::shared_ptr<Singleton> singleton = Singleton::GetInstance();
-    singleton->showMessage();
+    singleton->ShowMessage();
 
     // Further access to the Singleton will not create a new instance
-    Singleton* singleton2 = Singleton::GetInstance();
-    singleton2->showMessage();
+    std::shared_ptr<Singleton> singleton2 = Singleton::GetInstance();
+    singleton2->ShowMessage();
 
     return 0;
 }
+

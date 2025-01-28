@@ -1,27 +1,32 @@
-#include <include/Singleton.hpp>
+#include <creational/singleton/Singleton.hpp>
+#include <iostream>
 
 using namespace DesignPattern;
 
-std::shared_ptr<Singleton> Singleton::GetInstance()
+std::shared_ptr<Singleton>& Singleton::GetInstance()
 {
-    if ( m_instance = null_ptr )
+    if ( c_instance = nullptr )
     {
         std::call_once(m_flag, []() {
-            m_instance = std::make_shared<Singleton>();
+           c_instance = std::shared_ptr<Singleton>(new Singleton());
         });
     }
 
-    return m_instance;
+    return c_instance;
 }
 
 void Singleton::Restart()
 {
-    if ( m_instance != null_ptr )
+    if ( c_instance != nullptr )
     {
         std::call_once(m_flag, []() {
-            m_instance = null_ptr;
+            c_instance = nullptr;
         });
     }
+}
+
+Singleton::Singleton()
+{
 }
 
 void Singleton::ShowMessage() const
@@ -29,7 +34,7 @@ void Singleton::ShowMessage() const
     std::cout << "Hello from Singleton." << std::endl;
 }
 
-Singleton::Singleton() {}
-std::shared_ptr<Singleton> Singleton::m_instance = null_ptr;
-std::once_flag Singleton::flag;
+
+std::shared_ptr<Singleton> Singleton::c_instance = nullptr;
+std::once_flag Singleton::m_flag;
 
