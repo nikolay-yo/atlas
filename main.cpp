@@ -4,11 +4,11 @@ using DesignPattern;
 
 int main() {
     // Accessing the Singleton in multiple threads
-    Singleton* singleton = Singleton::getInstance();
+    std::shared_ptr<Singleton> singleton = Singleton::GetInstance();
     singleton->showMessage();
 
     // Further access to the Singleton will not create a new instance
-    Singleton* singleton2 = Singleton::getInstance();
+    Singleton* singleton2 = Singleton::GetInstance();
     singleton2->showMessage();
 
     return 0;
