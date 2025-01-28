@@ -14,6 +14,7 @@
 */*/out/
 
 # IDE and build system directories
+*/build/
 /.idea/
 /.vscode/
 /*.sublime-project
