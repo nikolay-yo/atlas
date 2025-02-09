@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import * as THREE from "three"
 
 @Component({
@@ -7,17 +7,42 @@ import * as THREE from "three"
   templateUrl: './threejs-scene.component.html',
   styleUrl: './threejs-scene.component.sass'
 })
-export class ThreejsSceneComponent implements OnInit, OnDestroy {
-  private scene = new THREE.Scene();
-  private camera = new THREE.PerspectiveCamera();
-  private renderer?: THREE.WebGLRenderer;
-  private cube = new THREE.Mesh();
+export class ThreejsSceneComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('canvasContainer') canvasContainer!: ElementRef<HTMLDivElement>;
 
-  constructor(private el: ElementRef) {}
+  private scene!: THREE.Scene;
+  private camera! : THREE.PerspectiveCamera;
+  private renderer!: THREE.WebGLRenderer;
+  private cube!: THREE.Mesh;
+
+  constructor() { return; }
 
   ngOnInit(): void {
-    this.initThreeJS();
-    this.animate();
+    if (typeof window !== 'undefined') {
+      // Setup scene and camera here
+      this.scene = new THREE.Scene();
+      this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      this.camera.position.z = 5;
+    }
+  }
+
+  ngAfterViewInit(): void {
+    // Make sure the DOM element is available before initializing the renderer
+    if (typeof window !== 'undefined' && this.canvasContainer && this.canvasContainer.nativeElement) {
+      // Create the renderer and attach it to the div container
+      this.renderer = new THREE.WebGLRenderer();
+      this.renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+      this.canvasContainer.nativeElement.appendChild(this.renderer.domElement); // Append the canvas to the div
+      
+      // Create a simple cube for demonstration
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+      this.cube = new THREE.Mesh(geometry, material);
+      this.scene.add(this.cube);
+
+      // Start the animation loop
+      this.animate();
+    }
   }
 
   ngOnDestroy(): void {
@@ -26,27 +51,6 @@ export class ThreejsSceneComponent implements OnInit, OnDestroy {
     if (this.renderer) {
       this.renderer!.dispose();
     }
-  }
-
-  private initThreeJS(): void {
-    // Set up the scene, camera, and renderer
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-
-    // Append the renderer to the DOM
-    alert("asaaaa");
-    this.el.nativeElement.appendChild(this.renderer.domElement);
-
-    // Create a cube and add it to the scene
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    this.cube = new THREE.Mesh(geometry, material);
-    this.scene.add(this.cube);
-
-    // Set the camera position
-    this.camera.position.z = 5;
   }
 
   private animate(): void {
