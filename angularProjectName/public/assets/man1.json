@@ -3,19 +3,19 @@
 		{
 			"_class": "Point",
 			"_id": "1",
-			"_initArguments": "[vector(0.999999999999999, -6.38378239159465e-016, 1.30901699437495)]",
+			"_initArguments": "[1, 0, 1.30901]",
 			"_parentsIds": "[]"
 		},
 		{
 			"_class": "Point",
 			"_id": "2",
-			"_initArguments": "[vector(-0.500000000000001, -0.86602540378444, 1.30901699437495)]",
+			"_initArguments": "[-0.500, -0.8660, 1.30901]",
 			"_parentsIds": "[]"
 		},
 		{
 			"_class": "Point",
 			"_id": "3",
-			"_initArguments": "[vector(-0.500000000000001, 0.866025403784437, 1.30901699437495)]",
+			"_initArguments": "[-0.500, 0.86607, 1.30901]",
 			"_parentsIds": "[]"
 		},
 		{
@@ -429,7 +429,7 @@
 		{
 			"_class": "Point",
 			"_id": "72",
-			"_initArguments": "[vector(0, 0, 0)]",
+			"_initArguments": "[0, 0, 0]",
 			"_parentsIds": "[]"
 		}
 	]
