@@ -111,6 +111,7 @@ export class AppComponent implements OnInit {
       this.isLoadingOnServer = true;
       console.log('Running on the server');
     } else if (this.platformService.isBrowser()) {
+    this.isLoadingOnServer = true;
       // Perform logic for client-side rendering
       console.log('Running in the browser');
     }

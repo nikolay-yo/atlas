@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ThreejsSceneComponent } from './threejs-scene/threejs-scene.component';
-import { PlatformServiceService } from './platform-service.service';
+import { ThreejsSceneComponent } from './components/threejs-scene/threejs-scene.component';
+import { PlatformCheckService } from './services/platform.service';
 import { RouterOutlet } from '@angular/router';
+import { CounterComponent } from "./components/counter/counter.component";
+import { ButtonCounterComponent } from './components/button/button.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ThreejsSceneComponent],
+  imports: [RouterOutlet, ThreejsSceneComponent, ButtonCounterComponent, CounterComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
@@ -15,7 +17,7 @@ export class AppComponent implements OnInit {
 
   title = 'angularProjectName';
 
-  constructor(private platformService: PlatformServiceService) {}
+  constructor(private platformService: PlatformCheckService) {}
 
   ngOnInit(): void {
     if (this.platformService.isServer()) {
