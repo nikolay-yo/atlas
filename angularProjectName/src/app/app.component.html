@@ -226,6 +226,13 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
+      @if (isLoadingOnServer) {
+      <h2>Server</h2>
+      } 
+      @else {
+      <h2>Client</h2>
+      }
+
       <p>Congratulations! Your app is running. 🎉</p>
       <app-threejs-scene></app-threejs-scene>
 
