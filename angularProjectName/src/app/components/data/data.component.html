@@ -1,0 +1,11 @@
+<!-- <ul>
+    <li *@for="let object3D of object3Ds">
+        {{object3D._class}}_{{object3D._id}}
+    </li>
+</ul> -->
+
+`<ul>
+    @for (object3D of object3Ds; track object3D._id) {
+    <li>{{object3D._class}}_{{object3D._id}}</li>
+    }
+  </ul>`

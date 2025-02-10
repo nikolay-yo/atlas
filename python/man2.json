@@ -1,0 +1,576 @@
+{
+	"root": {
+		"object": [
+			{
+				"_class": "Point",
+				"_id": "2",
+				"_initArguments": "[vector(1.1, 0.1, 0.1)]",
+				"_parentsIds": "[]"
+			},
+			{
+				"_class": "Point",
+				"_id": "4",
+				"_initArguments": "[vector(0.409016994374947, -0.851056516295154, 0.1)]",
+				"_parentsIds": "[]"
+			},
+			{
+				"_class": "Point",
+				"_id": "5",
+				"_initArguments": "[vector(-0.709016994374947, -0.487785252292473, 0.1)]",
+				"_parentsIds": "[]"
+			},
+			{
+				"_class": "Point",
+				"_id": "6",
+				"_initArguments": "[vector(-0.709016994374948, 0.687785252292473, 0.1)]",
+				"_parentsIds": "[]"
+			},
+			{
+				"_class": "Point",
+				"_id": "7",
+				"_initArguments": "[vector(0.409016994374947, 1.05105651629515, 0.1)]",
+				"_parentsIds": "[]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "8",
+				"_initArguments": "[]",
+				"_parentsIds": "[2, 4]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "10",
+				"_initArguments": "[]",
+				"_parentsIds": "[4, 5]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "12",
+				"_initArguments": "[]",
+				"_parentsIds": "[5, 6]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "14",
+				"_initArguments": "[]",
+				"_parentsIds": "[6, 7]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "16",
+				"_initArguments": "[]",
+				"_parentsIds": "[7, 2]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "18",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 5]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "19",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 6]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "20",
+				"_initArguments": "[]",
+				"_parentsIds": "[18, 19]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "21",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 6]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "22",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 7]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "23",
+				"_initArguments": "[]",
+				"_parentsIds": "[21, 22]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "24",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 7]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "25",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 2]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "26",
+				"_initArguments": "[]",
+				"_parentsIds": "[24, 25]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "27",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 2]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "28",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[10, 4]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "29",
+				"_initArguments": "[]",
+				"_parentsIds": "[27, 28]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "30",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 6]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "31",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 7]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "32",
+				"_initArguments": "[]",
+				"_parentsIds": "[30, 31]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "33",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 7]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "34",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 2]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "35",
+				"_initArguments": "[]",
+				"_parentsIds": "[33, 34]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "36",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 2]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "37",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[12, 4]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "38",
+				"_initArguments": "[]",
+				"_parentsIds": "[36, 37]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "39",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 7]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "40",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 2]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "41",
+				"_initArguments": "[]",
+				"_parentsIds": "[39, 40]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "42",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 2]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "43",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 4]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "44",
+				"_initArguments": "[]",
+				"_parentsIds": "[42, 43]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "45",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 4]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "46",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[14, 5]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "47",
+				"_initArguments": "[]",
+				"_parentsIds": "[45, 46]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "48",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 2]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "49",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 4]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "50",
+				"_initArguments": "[]",
+				"_parentsIds": "[48, 49]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "51",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 4]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "52",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 5]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "53",
+				"_initArguments": "[]",
+				"_parentsIds": "[51, 52]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "54",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 5]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "55",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[16, 6]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "56",
+				"_initArguments": "[]",
+				"_parentsIds": "[54, 55]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "58",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[8, 6]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "59",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[8, 7]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "60",
+				"_initArguments": "[]",
+				"_parentsIds": "[58, 59]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "61",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[8, 5]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "62",
+				"_initArguments": "[2.0344439357957027]",
+				"_parentsIds": "[8, 6]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "63",
+				"_initArguments": "[]",
+				"_parentsIds": "[61, 62]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "94",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 21]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "95",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 22]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "96",
+				"_initArguments": "[]",
+				"_parentsIds": "[94, 95]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "97",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 18]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "98",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 19]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "99",
+				"_initArguments": "[]",
+				"_parentsIds": "[97, 98]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "100",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 4]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "102",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 27]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "103",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 28]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "104",
+				"_initArguments": "[]",
+				"_parentsIds": "[102, 103]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "105",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 4]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "106",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 5]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "107",
+				"_initArguments": "[]",
+				"_parentsIds": "[105, 106]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "108",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 18]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "109",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 19]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "110",
+				"_initArguments": "[]",
+				"_parentsIds": "[108, 109]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "111",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 27]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "112",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[23, 28]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "113",
+				"_initArguments": "[]",
+				"_parentsIds": "[111, 112]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "114",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 18]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "115",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 19]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "116",
+				"_initArguments": "[]",
+				"_parentsIds": "[114, 115]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "117",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 5]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "118",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 6]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "119",
+				"_initArguments": "[]",
+				"_parentsIds": "[117, 118]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "120",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 30]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "121",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[35, 31]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "122",
+				"_initArguments": "[]",
+				"_parentsIds": "[120, 121]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "123",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 39]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "124",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 40]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "125",
+				"_initArguments": "[]",
+				"_parentsIds": "[123, 124]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "126",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 6]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "127",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 7]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "128",
+				"_initArguments": "[]",
+				"_parentsIds": "[126, 127]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "129",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 30]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "130",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[44, 31]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "131",
+				"_initArguments": "[]",
+				"_parentsIds": "[129, 130]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "132",
+				"_initArguments": "[]",
+				"_parentsIds": "[97, 126]"
+			},
+			{
+				"_class": "RotatedPointByAngle",
+				"_id": "3",
+				"_initArguments": "[4.2487413713838835]",
+				"_parentsIds": "[26, 5]"
+			},
+			{
+				"_class": "Segment",
+				"_id": "101",
+				"_initArguments": "[]",
+				"_parentsIds": "[100, 3]"
+			}
+		]
+	}
+}

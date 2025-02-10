@@ -4,13 +4,16 @@ import { PlatformCheckService } from './services/platform.service';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from "./components/counter/counter.component";
 import { ButtonCounterComponent } from './components/button/button.component';
+import { DataComponent } from './components/data/data.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ThreejsSceneComponent, ButtonCounterComponent, CounterComponent ],
+  imports: [ RouterOutlet, ThreejsSceneComponent, ButtonCounterComponent, CounterComponent, DataComponent ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: './app.component.sass',
+  providers: [  ]
 })
+
 export class AppComponent implements OnInit {
   
   isLoadingOnServer = false;
@@ -29,3 +32,4 @@ export class AppComponent implements OnInit {
   }
   
 }
+
